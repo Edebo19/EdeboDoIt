@@ -6,7 +6,7 @@ const Vendors = ({info}) => {
   console.log(info.Goods.toLowerCase())
   const Nav = useNavigate()
   return (
-    <div className='Vendors' onClick={()=>Nav(`/menu-page/${info.Goods.toLowerCase()}`)}>
+    <div className='Vendors' onClick={()=>Nav(`/user/menu-page/${info.Goods.toLowerCase()}`)}>
         <div className="VendorsLeft">
             <h3>{info.vendorname}</h3>
             <p>{info.Goods}</p>

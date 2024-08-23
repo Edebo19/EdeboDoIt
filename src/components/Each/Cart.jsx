@@ -18,7 +18,7 @@ const Cart = ({setCheckout}) => {
     const Nav = useNavigate()
     const Proceed =()=>{
         setCheckout(true),
-        Nav("/checkout")
+        Nav("/user/checkout")
     }
     
   return (

@@ -17,18 +17,28 @@
     position: relative;
 }
 .PaymentMethod{
-    height: 10%;
+    height: 13%;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     /* background: red; */
+    
+
 }
 .PaymentHeader{
-    height: 35%;
+    height: 100%;
     width: 100%;
     /* background: palegreen; */
     display: flex;
+    flex-direction: column;
     padding-left: 13px;
     padding-top: 5px;
+
+    & select{
+        height: 40%;
+        width: 18%;
+        cursor: pointer;
+        background-color: rgba(255, 166, 0, 0.707);
+    }
 
     & h3{
         font-size: 25px;
@@ -189,15 +199,23 @@
 }
 
 .VendItems{
-    height: max-content;
+    height: 98%;
     min-height: 120px;
-    max-height: 200px;
+    /* max-height: 200px; */
     width: 100%;
     /* background-color: aquamarine; */
     overflow-y: scroll;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 10px;
+
+
+}
+.hereee{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }
 .vendFooter{
     height: 36px;
@@ -306,5 +324,12 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 17px;
         font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .CheckoutHolder{
+        height: 98%;
+        width: 100%;
     }
 }

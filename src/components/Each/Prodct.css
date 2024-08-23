@@ -73,3 +73,11 @@
     width: 60%;
     background: rgb(223, 219, 219);
 }
+@media screen and (max-width: 768px) {
+    .CartWhole{
+        height: 80%;
+        border-radius: 10px;
+        width: 100%;
+        background: rgb(223, 219, 219);
+    }
+}

@@ -11,48 +11,11 @@ const Checkout = () => {
     const FilteredVendor = Vendor.filter((e)=> e.vendorname === vendors)
     console.log(FilteredVendor)
     const {cartArr} = useSelector((state)=> state)
-    console.log(cartArr.filter((e)=> e.vendorname))
+    // console.log(cartArr.filter((e)=> e.vendorname === vendors))
+    const filteredCart = cartArr.filter((e)=> e.vendorname === vendors)
+    // console.log(filteredCart)
 
-    const food = [
-        {
-            id: 4,
-            name: "Fried Rice and Turkey",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyL52dwSxiPfXmMn6Vbw71M8srMFV5YAZyrg&s",
-            description: "",
-            Category:"Food",
-            price: 2000,
-            vendorname: "Iya Bolu"
-        },
-        {
-            id: 5,
-            name: "Spaghetti and Turkey",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnthpx9j8a4rC-gQzFUVilxS0crIDqTvrFg&s",
-            description: "",
-            Category:"Food",
-            price: 2000,
-            vendorname: "Iya Bolu"
-        },
-    ]
-    const snacks = [
-        {
-            id: 6,
-            name: "Eggroll",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzYEaKOhN0BJXWnNAHWenFsoxoBVooqxgf0DHXiOv9OJvscJXsigF0hy7d6rD-CM4FK2g&usqp=CAU",
-            description: "",
-            Category:"Snacks",
-            price: 500,
-            vendorname: "Iya Bolu"
-        },
-        {
-            id: 7,
-            name: "MeatPie",
-            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU7juDz5fwf6dOKGJgnZblCxRxYZMSRhJUeA&s",
-            description: "",
-            Category:"Snacks",
-            price: 2000,
-            vendorname: "Iya Bolu"
-        },
-    ]
+  
   return (
     <div className='CheckoutBody'>
         {
@@ -75,27 +38,30 @@ const Checkout = () => {
             <div className="PaymentBody">
                 <div className="VendorCheckoutBody">
                     <div className="VendHeader">
-                        <h5>Mama Rita</h5>
+                        <h5>{vendors}</h5>
                         <p>Total: ₦2800</p>
                     </div>
                     <div className="VendItems">
                     {
-                        food.map((e)=> (
-                            <div className="vendCard">
-                        <div className="imageCircle">
-                            <img src={e.image} alt="" />
-                        </div>
-                        <div className="pricename">
-                            <h3>{e.name}</h3>
-                            <p>₦{e.price}</p>
-                        </div>
-                        <div className="QuantityVend">
-                            <div className="MainQty">
-                                <h4>Quantity: 0</h4>
+                        filteredCart.length == 0 ? <div className='hereee'>No Item from this vendor selected in cart</div>:
+                        
+                            filteredCart.map((e)=> (
+                                <div className="vendCard" key={e.id}>
+                            <div className="imageCircle">
+                                <img src={e.image} alt="" />
+                            </div>
+                            <div className="pricename">
+                                <h3>{e.name}</h3>
+                                <p>₦{e.price}</p>
+                            </div>
+                            <div className="QuantityVend">
+                                <div className="MainQty">
+                                    <h4>Quantity: 0</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                        ))
+                            ))
+                        
                     }
                     </div>
                     <div className="vendFooter">
@@ -116,7 +82,7 @@ const Checkout = () => {
         <div className="PaymentBody">
             <div className="VendorCheckoutBody">
                 <div className="VendHeader">
-                    <h5>Mama Rita</h5>
+                    <h5></h5>
                     <p>Total: ₦2800</p>
                 </div>
                 <div className="VendItems">

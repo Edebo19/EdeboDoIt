@@ -6,6 +6,7 @@ import LandingPage from './components/Auth/LandingPage'
 import BuyersPage from './components/Home/BuyersPage'
 import Product from './components/Each/Product'
 import Checkout from './components/Checkout/Checkout'
+import Private from './components/Each/Private'
 
 const router = createHashRouter([
   {
@@ -21,17 +22,23 @@ const router = createHashRouter([
     element:<SignUp/>
   },
   {
-    path: "buyer",
-    element:<BuyersPage/>
-  },
-  {
-    path: "menu-page/:catname",
-    element:<Product/>
-  },
-  {
-    path: "/checkout",
-    element:<Checkout/>
-  },
+    path: "user",
+    element: <Private/>,
+    children: [
+      {
+        path: "buyer",
+        element:<BuyersPage/>
+      },
+      {
+        path: "menu-page/:catname",
+        element:<Product/>
+      },
+      {
+        path: "checkout",
+        element:<Checkout/>
+      }
+    ]
+  }
 ])
 const App = () => {
   return (

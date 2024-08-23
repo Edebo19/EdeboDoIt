@@ -12,12 +12,6 @@ export const Vendor =[
         image: "https://media.premiumtimesng.com/wp-content/files/2022/03/Fullscreen-capture-13032022-030826-PM.bmp_.jpg"
     },
     {
-        id: 3,
-        vendorname: "Iya Bisi",
-        Goods: "BreakFast Meals",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4JkB5potzMhzLWyum8nBv3z0JOt9Zirev6w&s"
-    },
-    {
         id: 4,
         vendorname: "Drink Valore",
         Goods: "Drinks",

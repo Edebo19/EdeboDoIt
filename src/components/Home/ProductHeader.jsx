@@ -4,6 +4,7 @@ import logo from '../../assets/LaCurveLogo.jpg'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../Global/Slice'
+import { BsCart } from 'react-icons/bs'
 
 const ProductHeader = ({setShow}) => {
     const {cartArr} = useSelector((state)=> state)
@@ -29,6 +30,11 @@ const ProductHeader = ({setShow}) => {
                 <div className="Round">{cartArr.length}</div>
             </button>
             <button onClick={logoutFunc} className='transparent'>Logout</button>
+        </div>
+        <div className="mobilecart">
+            <BsCart onClick={()=> setShow(true)} fontWeight={600} size={25} color='white'/>
+            
+            <button onClick={logoutFunc}>Logout</button>
         </div>
     </div>
   )

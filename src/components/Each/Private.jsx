@@ -1,10 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 const Private = () => {
-    const {vendors, buyers} = useSelector((state)=> state.App.users)
+    const isLoggedIn = useSelector((state)=>state)
+    const Nav = useNavigate()
   return (
-    <div>Private</div>
+    <>
+    {
+      isLoggedIn ? <Outlet/> : Nav("/login") 
+    }
+    </>
   )
 }
 
