@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     color: white;
     align-items: center;
 }
@@ -138,6 +139,57 @@
         color: white;
     }
 }
+.sideHolder{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    z-index: 9999;
+    animation: slideInRight; 
+    animation-duration: 1s;     
+    
+
+}
+.closeside{
+    height: 10%;
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5px;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+.sidebar{
+    height: 100%;
+    width: 70%;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 4px;
+
+    h3{
+        height: 35px;
+        width: 140px;
+        padding-left: 4px;
+        border-radius: 3px;
+        
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    & h3:hover{
+        background-color: orange;
+    }
+    
+}
 @media screen and (max-width: 768px) {
     .Account{
         display: block;
@@ -149,7 +201,7 @@
 
     }
     .Left{
-        width: 60%;
+        width: 68%;
         height: 40%;
 
         img{

@@ -162,3 +162,16 @@ form{
         }
     }
 }
+@media screen and (max-width:768px){
+    .LoginWrapper{
+        height: 100%;
+        width: 100%;
+        background: rgba(128, 128, 128, 0.623);
+        border-radius: 6px;
+        padding: 9px;
+        display: flex;
+        color: white;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
