@@ -1,17 +1,18 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { Outlet, useNavigate } from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { Navigate, Outlet, useNavigate } from 'react-router-dom';
 
 const Private = () => {
-    const isLoggedIn = useSelector((state)=>state)
-    const Nav = useNavigate()
-  return (
-    <>
-    {
-      isLoggedIn === true ? <Outlet/> : Nav("/login") 
-    }
-    </>
-  )
-}
+  const isLoggedIn = useSelector((state) => state.isLoggedIn); // assume isLoggedIn is a boolean property in the state
+  const navigate = useNavigate();
 
-export default Private
+  useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/login", { replace: true });
+    }
+  }, [isLoggedIn, navigate]);
+
+  return isLoggedIn ? <Outlet /> : null;
+};
+
+export default Private;

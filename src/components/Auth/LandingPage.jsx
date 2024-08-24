@@ -54,7 +54,7 @@ const LandingPage = () => {
             <button onClick={()=> Nav("/signup")} className='transparent'>Sign Up</button>
         </div>
         <div className="Account">
-            <FaUserCircle onClick={()=> setfirst(true)} size={30} size={30} color='white'/>
+            <FaUserCircle onClick={()=> setfirst(true)} size={30} color='white'/>
         </div>
     </div>
     {/* <div className="sideHolder">
