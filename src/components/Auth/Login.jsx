@@ -41,7 +41,7 @@ const Login = () => {
     const isLoggedIn = useSelector((state)=> state)
     useEffect(()=>{
         if (isLoggedIn === true) {
-            Nav('/buyer')
+            Nav('/user/buyer')
         }
     },[])
   return (
