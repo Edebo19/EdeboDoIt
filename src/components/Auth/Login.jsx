@@ -32,13 +32,11 @@ const Login = () => {
             toast.error("Please fill all fields")
         }else {
             dispatch(buyerLogin({password, email}))
-            
-            Nav("/buyer")
         }
         
         }
 
-    const isLoggedIn = useSelector((state)=> state)
+    const {isLoggedIn} = useSelector((state)=> state)
     useEffect(()=>{
         if (isLoggedIn === true) {
             Nav('/user/buyer')
