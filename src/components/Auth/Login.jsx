@@ -32,6 +32,7 @@ const Login = () => {
             toast.error("Please fill all fields")
         }else {
             dispatch(buyerLogin({password, email}))
+            Nav('/user/buyer')
         }
         
         }

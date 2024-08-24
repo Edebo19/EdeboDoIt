@@ -33,11 +33,11 @@ const FoodApp = createSlice({
                     state.userBox.buyers = payload
                     
                 } else {
-                    toast.error("Incorrect Password")
+                    alert("Incorrect Password")
                 }
 
             } else {
-                toast.error("User not found, Check email")
+                alert("User not found, Check email")
                 
             }
         },
@@ -49,10 +49,10 @@ const FoodApp = createSlice({
                     state.loginInfo.loggedInUser =  payload
                     state.userBox.vendors = payload
                 } else {
-                    toast.error("Incorrect Password")
+                    alert("Incorrect Password")
                 }
             } else {
-                toast.error("User not found, check email")
+                alert("User not found, check email")
             }
         },
         addToCart:(state, {payload})=>{

@@ -8,7 +8,7 @@ const Private = () => {
   return (
     <>
     {
-      isLoggedIn ? <Outlet/> : Nav("/login") 
+      isLoggedIn === true ? <Outlet/> : Nav("/login") 
     }
     </>
   )
