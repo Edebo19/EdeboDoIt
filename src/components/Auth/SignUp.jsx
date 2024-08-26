@@ -15,6 +15,7 @@ const SignUp = () => {
     const [username, setUsername] = useState("")
     const [passErr, setPassErr] = useState("")
     const [role, setRole] = useState("")
+    
     // const User = z.object({
     //     email: z.string().email({message:"please input a valid email"}),
     //     name: z.string(),

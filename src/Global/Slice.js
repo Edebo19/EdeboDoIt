@@ -25,7 +25,7 @@ const FoodApp = createSlice({
             }
           },
         buyerLogin:(state, {payload})=>{
-            const CheckBuyer = state.userBox.buyers.findIndex((e)=> e.e.email === payload.email)
+            const CheckBuyer = state.userBox.buyers.findIndex((e)=> e.email === payload.email)
             if (CheckBuyer !== -1) {
                 if (state.userBox.buyers[CheckBuyer].password === payload.password) {
                     state.loginInfo.isLoggedIn = true
